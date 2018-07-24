@@ -18,6 +18,18 @@ body {
   color: #000000;
 }
 
+a, 
+button,
+input,
+textarea {
+  outline: 0;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px #ccc;
+}
+
 a {
   text-decoration: none;
 }
@@ -100,10 +112,16 @@ button {
   border-radius: 16px;
   font-size: 12px;
   color: #ffffff;
+  transition: background-color 0.3s;
 }
 
 .btn--main {
   background-color: #ce0200;
+}
+
+.btn--main:hover,
+.btn-main:active {
+  background-color: #c30000;
 }
 
 .order-call-btn {
@@ -116,6 +134,10 @@ button {
   padding: 10px 16px;
   color: #777777;
   font-size: 12px;
+}
+
+.profile__link:hover {
+  color: #333333;
 }
 
 .profile__link::after {
@@ -131,10 +153,14 @@ button {
 .logout-btn {
   width: 52px;
   height: 27px;
-  margin-top: 10px;
+  margin-top: 9px;
   padding: 9px 20px;
   background: url(../img/sprite.png) 20px 9px no-repeat;
   background-clip: content-box;
+}
+
+.logout-btn:hover {
+  opacity: 0.6;
 }
 
 .search {
@@ -176,12 +202,20 @@ button {
   text-decoration: underline;
 }
 
+.search__link:hover {
+  text-decoration: none;
+}
+
 .dashed-btn {
   position: relative;
   margin-top: 8px;
   padding: 0;
   font-size: 14px;
   border-bottom: 1px dashed #ce0200;
+}
+
+.dashed-btn:hover {
+  color: #ce0200;
 }
 
 .price-btn {
@@ -216,6 +250,28 @@ button {
   align-items: center;
   height: 90px;
   border-radius: 20px;
+}
+
+.cat-banner__link::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  transition: background-color 0.3s;
+}
+
+.cat-banner__link:hover::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
 }
 
 .cat-banner--red {
@@ -258,6 +314,10 @@ button {
 
 .breadcrumbs a {
   color: currentColor;
+}
+
+.breadcrumbs a:hover {
+  color: #777777;
 }
 
 .breadcrumbs span {
@@ -342,6 +402,11 @@ button {
 
 .slick-next::before {
   background: url(../img/sprite.png) -70px -20px no-repeat;
+}
+
+.slick-next:hover::before,
+.slick-prev:hover::before {
+  opacity: 0.5;
 }
 
 .slick-slide {
@@ -462,6 +527,11 @@ button {
   right: 7px;
 }
 
+.product__count-minus:active,
+.product__count-plus:active {
+  margin-top: 1px;
+}
+
 .artikul {
   margin-top: 8px;
   font-size: 14px;
@@ -473,6 +543,7 @@ button {
   border-radius: 18px;
   font-size: 14px;
   color: #ffffff;
+  transition: background-color 0.3s;
 }
 
 .action-btn {
@@ -481,6 +552,11 @@ button {
   margin-left: 20px;
   padding-left: 40px;
   background-color: #ffb400;
+}
+
+.action-btn:hover,
+.action-btn:active {
+  background-color: #ee9200;
 }
 
 .action-btn::before {
