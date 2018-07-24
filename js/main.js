@@ -3,6 +3,7 @@
 $(document).ready(function(){
   initCarousel();
   initCount();
+  initFilter();
 });
 
 function initCarousel() {
@@ -47,4 +48,11 @@ function initCount() {
   function checkEmptyCount() {
     if (!input.value) input.value = 1;
   }
+}
+
+function initFilter() {
+  var filterTab = document.querySelector('.filter__tab');
+  filterTab.addEventListener('click', function(){
+    filterTab.classList.toggle('js-filter-closed');
+  });
 }
